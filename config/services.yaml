@@ -22,3 +22,11 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    App\Service\CurlService: ~
+    App\Service\Interfaces\GetDataInterface: '@App\Service\CurlService'
+
+    App\Service\ParamsValidatorService: ~
+    App\Service\Interfaces\ValidationInterface: '@App\Service\ParamsValidatorService'
+
+    App\Service\UrlContructorService: ~
+    App\Service\Interfaces\UrlInterface: '@App\Service\UrlContructorService'
